@@ -1,4 +1,4 @@
-require('dotenv').config() // read password and other settings from .env file, so no need hardcode them here
+require('dotenv').config({ path: __dirname + '/.env' }) // read password and other settings from .env file, so no need hardcode them here
 const mysql = require('mysql2/promise')
 
 const pool = mysql.createPool({
