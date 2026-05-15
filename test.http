@@ -1,0 +1,61 @@
+### Health check
+GET http://localhost:3001/
+
+### Get all employees
+GET http://localhost:3001/employees
+
+### Search by name
+GET http://localhost:3001/employees?q=ahmad
+
+### Sort by salary descending
+GET http://localhost:3001/employees?sortBy=salary&order=desc
+
+### Get single employee
+GET http://localhost:3001/employees/1
+
+### Create new employee
+POST http://localhost:3001/employees
+Content-Type: application/json
+
+{
+  "empId": "EMP008",
+  "name": "Lee Mei Ling",
+  "email": "lee.meiling@company.com.my",
+  "department": "Operations",
+  "position": "Operations Manager",
+  "hireDate": "2022-03-01",
+  "salary": 7500,
+  "active": true
+}
+
+### Update employee
+PUT http://localhost:3001/employees/8
+Content-Type: application/json
+
+{
+  "empId": "EMP008",
+  "name": "Lee Mei Ling",
+  "email": "lee.meiling@company.com.my",
+  "department": "Operations",
+  "position": "Senior Operations Manager",
+  "hireDate": "2022-03-01",
+  "salary": 9000,
+  "active": true
+}
+
+### Delete employee
+DELETE http://localhost:3001/employees/8
+
+### Test validation (should return 400)
+POST http://localhost:3001/employees
+Content-Type: application/json
+
+{
+  "empId": "wrong",
+  "name": "AB",
+  "email": "not-email",
+  "department": "Unknown",
+  "position": "",
+  "hireDate": "2099-01-01",
+  "salary": 100
+}
