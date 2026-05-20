@@ -1,9 +1,9 @@
 # Employee Directory — Chapter 8 Individual Assignment
 
-**Name:** LEE MEI SHUET
-**Matric No:** A24CS0102
+**Name:** LEE MEI SHUET  
+**Matric No:** A24CS0102  
 **Course:** Web Application Development  
-**Stack:** Vue 3 · Vite · Axios · Express · MySQL
+**Stack:** Vue 3 · Vite · Axios · Express · MySQL  
 
 ---
 
