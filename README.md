@@ -19,6 +19,8 @@
 3. Press F9 to execute
 4. Verify: 7 rows appear in `employee_directory.employees`
 
+> **Note:** If your MySQL requires a password, please copy `server/.env.example` to `server/.env` and update your database credentials accordingly.
+
 ### 2. Backend (port 3001)
 ```bash
 cd server
@@ -38,8 +40,15 @@ Browser opens automatically at `http://localhost:5174`
 ---
 
 ## Architecture
-Browser (5174) ←→ Express API (3001) ←→ MySQL (3306)
-Vue 3             Node.js             Laragon
+
+| Layer | Frontend (Browser) | Backend (API) | Database |
+| :--- | :--- | :--- | :--- |
+| **Port** | 5174 | 3001 | 3306 |
+| **Technology** | Vue 3 | Node.js (Express) | MySQL (Laragon) |
+
+---
+
+**Flow:** `Browser (Vue 3)` ←→ `Express API (Node.js)` ←→ `MySQL (Laragon)`
 
 ## Notes
 - All SQL queries use prepared statements (? placeholders) — no string concatenation
